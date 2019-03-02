@@ -216,7 +216,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Dates" id="alB-q8-qtL" userLabel="People">
+                            <tableViewSection headerTitle="People" id="alB-q8-qtL" userLabel="People">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f59-Nn-MZO">
                                         <rect key="frame" x="0.0" y="387.5" width="375" height="44"/>
@@ -318,6 +318,34 @@
                                             <segue destination="w5c-ri-ngc" kind="show" id="zSR-Xb-wlg"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FkR-t0-7MI">
+                                        <rect key="frame" x="0.0" y="575.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FkR-t0-7MI" id="H9v-Fo-osZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi ($10 per day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asB-g0-YEI">
+                                                    <rect key="frame" x="16" y="11" width="148" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-bd-Th7">
+                                                    <rect key="frame" x="310" y="11" width="51" height="22"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Iku-bd-Th7" secondAttribute="trailing" id="3f1-ba-r8r"/>
+                                                <constraint firstItem="Iku-bd-Th7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="asB-g0-YEI" secondAttribute="trailing" id="FAw-JR-ka7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Iku-bd-Th7" secondAttribute="bottom" id="OZK-AF-3ub"/>
+                                                <constraint firstItem="asB-g0-YEI" firstAttribute="top" secondItem="H9v-Fo-osZ" secondAttribute="topMargin" id="PfA-lc-pTf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="asB-g0-YEI" secondAttribute="bottom" id="UQZ-Qm-Xxq"/>
+                                                <constraint firstItem="Iku-bd-Th7" firstAttribute="top" secondItem="H9v-Fo-osZ" secondAttribute="topMargin" id="cuK-qb-drG"/>
+                                                <constraint firstItem="asB-g0-YEI" firstAttribute="leading" secondItem="H9v-Fo-osZ" secondAttribute="leadingMargin" id="fXs-u0-uCW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -348,6 +376,7 @@
                         <outlet property="firstNameTextField" destination="o0K-rO-3iD" id="CuG-AF-QbW"/>
                         <outlet property="lastNameTextField" destination="tpB-mw-dpv" id="GcR-Lg-Dge"/>
                         <outlet property="roomSelectionLabel" destination="M7t-Cl-MZe" id="K0s-ix-ZGz"/>
+                        <outlet property="wifiSwitch" destination="Iku-bd-Th7" id="9by-WC-4AB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjM-5P-njb" userLabel="First Responder" sceneMemberID="firstResponder"/>

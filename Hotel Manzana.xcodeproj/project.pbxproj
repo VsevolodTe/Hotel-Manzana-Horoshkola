@@ -16,6 +16,8 @@
 		AC002A6F22089D7D00889103 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC002A6E22089D7D00889103 /* AddRegistrationTableViewController.swift */; };
 		ACB0B3A12217EA4E00FC936C /* AddRegistrationTableViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0B3A02217EA4E00FC936C /* AddRegistrationTableViewController+Keyboard.swift */; };
 		ACB0B3A32218031D00FC936C /* RoomSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0B3A22218031D00FC936C /* RoomSelectionTableViewController.swift */; };
+		ACE6101E222A747E00FF663A /* Screenshot 1.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE6101C222A747E00FF663A /* Screenshot 1.png */; };
+		ACE6101F222A747E00FF663A /* Screenshot 2.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE6101D222A747E00FF663A /* Screenshot 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AC002A6E22089D7D00889103 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		ACB0B3A02217EA4E00FC936C /* AddRegistrationTableViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddRegistrationTableViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		ACB0B3A22218031D00FC936C /* RoomSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelectionTableViewController.swift; sourceTree = "<group>"; };
+		ACE6101C222A747E00FF663A /* Screenshot 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 1.png"; sourceTree = "<group>"; };
+		ACE6101D222A747E00FF663A /* Screenshot 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		AC002A2E2208969300889103 = {
 			isa = PBXGroup;
 			children = (
+				ACE61017222A735900FF663A /* Screenshots */,
 				AC002A392208969300889103 /* Hotel Manzana */,
 				AC002A382208969300889103 /* Products */,
 			);
@@ -125,6 +130,15 @@
 				ACB0B3A22218031D00FC936C /* RoomSelectionTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACE61017222A735900FF663A /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				ACE6101C222A747E00FF663A /* Screenshot 1.png */,
+				ACE6101D222A747E00FF663A /* Screenshot 2.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,8 @@
 			files = (
 				AC002A452208969400889103 /* LaunchScreen.storyboard in Resources */,
 				AC002A422208969400889103 /* Assets.xcassets in Resources */,
+				ACE6101E222A747E00FF663A /* Screenshot 1.png in Resources */,
+				ACE6101F222A747E00FF663A /* Screenshot 2.png in Resources */,
 				AC002A402208969300889103 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

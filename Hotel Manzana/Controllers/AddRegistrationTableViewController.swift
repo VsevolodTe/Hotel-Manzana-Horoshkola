@@ -10,6 +10,7 @@ import UIKit
 
 class AddRegistrationTableViewController: UITableViewController {
 
+    // MARK: ... @IBOutlet
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -30,6 +31,7 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet weak var wifiSwitch: UISwitch!
     
+    // MARK: ... Properties
     let checkInLabelPath = IndexPath(row: 0, section: 1)
     let checkInPickerPath = IndexPath(row: 1, section: 1)
     let checkOutLabelPath = IndexPath(row: 2, section: 1)
@@ -37,11 +39,13 @@ class AddRegistrationTableViewController: UITableViewController {
     
     var selectedRoomIndex: Int?
     
+    // MARK: ... UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    // MARK: ... Custom Methods
     func setupUI() {
         checkInPicker.date = Date()
         checkInPicker.isHidden = true
@@ -71,6 +75,8 @@ class AddRegistrationTableViewController: UITableViewController {
         adultsLabel.text = "Adults: \(Int(adultsStepper.value))"
         childrenLabel.text = "Children: \(Int(childrenStepper.value))"
     }
+    
+    // MARK: ... Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath {
         case checkInLabelPath:
@@ -95,6 +101,7 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    // MARK: ... @IBAction
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         view.endEditing(true)
         
@@ -145,6 +152,15 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBAction func UIStepper(_ sender: Any) {
         updateUI()
+    }
+    
+    // MARK: ... Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "RoomSelectionSegue" else { return }
+        
+        guard let controller = segue.destination as? RoomSelectionTableViewController else { return }
+        
+        controller.selectedRow = selectedRoomIndex
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {

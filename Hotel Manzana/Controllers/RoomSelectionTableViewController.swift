@@ -17,7 +17,16 @@ class RoomSelectionTableViewController: UITableViewController {
         
         navigationItem.hidesBackButton = true
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedRow = selectedRow {
+            let indexPath = IndexPath(row: selectedRow, section: 0)
+            tableView(tableView, didSelectRowAt: indexPath)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return RoomType.all.count
     }
